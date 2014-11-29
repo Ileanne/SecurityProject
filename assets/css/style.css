@@ -1,0 +1,16 @@
+input#email {
+width: 83%;
+display: block;
+margin-left: 100px;
+}
+
+input#password {
+width: 83%;
+display: block;
+margin-left: 100px;
+}
+
+
+label#label_login {
+margin-left: 100;
+}
