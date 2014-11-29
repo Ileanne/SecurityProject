@@ -1,16 +1,13 @@
 input#email {
 width: 83%;
 display: block;
-margin-left: 100px;
+margin-left: 150px;
 }
 
 input#password {
 width: 83%;
 display: block;
-margin-left: 100px;
+margin-left: 150px;
 }
 
 
-label#label_login {
-margin-left: 100;
-}
