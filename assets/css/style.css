@@ -1,13 +1,28 @@
 input#email {
-width: 83%;
-display: block;
-margin-left: 150px;
+	width: 45%;
+	display: block;
+	margin-left: 28%;
+	margin-right: 10%;
 }
+
+
+
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
 
 input#password {
-width: 83%;
-display: block;
-margin-left: 150px;
+	width: 45%;
+	display: block;
+	margin-left: 28%;
+	margin-right: 10%;
+
 }
 
-
+input#login_form{
+	width: 30%;
+	display: block;
+	margin-left: 35%;
+	margin-right: 35%;
+}
