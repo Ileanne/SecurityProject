@@ -17,8 +17,7 @@
 <script language="JavaScript" type="text/javascript" src="./cryptico/api.js"></script>
 <script src="http://www.parsecdn.com/js/parse-1.3.2.min.js"></script>
 <script type="text/javascript">
-Parse.initialize("hG72SI2zpLKcPP6qzkd6oU2o9FsZnlFW1ZP9QYWV", "tNjKZ7LWq1rWd7qVfPibZOalEQKFctX8lRezEgDI");
-
+  Parse.initialize("hG72SI2zpLKcPP6qzkd6oU2o9FsZnlFW1ZP9QYWV", "tNjKZ7LWq1rWd7qVfPibZOalEQKFctX8lRezEgDI");
 </script>
 </head>
 
@@ -46,23 +45,33 @@ Parse.initialize("hG72SI2zpLKcPP6qzkd6oU2o9FsZnlFW1ZP9QYWV", "tNjKZ7LWq1rWd7qVfP
 
 <div class="row">
   <div class="login-form text-center">
-    <h3>Iniciar Sesión</h3>
+    <h3>Registrate</h3>
 
     <form action="#" method="get" accept-charset="utf-8">
+      <label for="email">Nombre:</label>
+      <input type="text" name="" id="nombre" value="" placeholder="Ingresa tu nombre completo " class="medium center">
+
       <label for="email">Email:</label>
       <input type="email" name="" id="email" value="" placeholder="Ingresa tu correo electrónico" class="medium center">
       <label for="password">Password:</label>
       <input type="password" name="" id="password" value="" placeholder="Ingresa tu contraseña" class="medium">
-      <input type="submit" name="" id="" value="Ingresar" class="button" onclick="dencrypt();">
+       
+
+      <input type="submit" name="" id="" value="Sign In" class="button" onclick="encrypt();">
+
+
     </form>     
   </div>
 </div>
-
 <script type="text/javascript" language="javascript" src="./js/functions.js"></script>
+
+
+
 
 <!--includes javascript at the bottom so the page loads faster-->
 <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
+</script>
 
 
 

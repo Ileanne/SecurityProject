@@ -20,6 +20,14 @@ input#password {
 
 }
 
+input#nombre {
+	width: 45%;
+	display: block;
+	margin-left: 28%;
+	margin-right: 10%;
+
+}
+
 input#login_form{
 	width: 30%;
 	display: block;
