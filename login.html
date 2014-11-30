@@ -17,7 +17,13 @@
 <link href="furatto/assets/css/font-awesome.css" rel="stylesheet">
 <link href="furatto/assets/css/examples.css" rel="stylesheet">
 <link href="assets/css/style.css" rel="stylesheet">
-
+<script type="text/javascript" language="javascript" src="./js/jquery.js"></script>
+<script language="JavaScript" type="text/javascript" src="./cryptico/jsbn.js"></script>
+<script language="JavaScript" type="text/javascript" src="./cryptico/random.js"></script>
+<script language="JavaScript" type="text/javascript" src="./cryptico/hash.js"></script>
+<script language="JavaScript" type="text/javascript" src="./cryptico/rsa.js"></script>
+<script language="JavaScript" type="text/javascript" src="./cryptico/aes.js"></script>
+<script language="JavaScript" type="text/javascript" src="./cryptico/api.js"></script>
 
 </head>
 
@@ -36,6 +42,7 @@
    </ul>
    <ul class="pull-right">
      <li class="divider"></li>
+     <li><a href="#">Login</a></li>
      <li class="divider"></li>
      <li><a href="#" class="button danger three-d">Sign Up</a></li>
    </ul>
@@ -51,29 +58,41 @@
       <input type="email" name="" id="email" value="" placeholder="Ingresa tu correo electrónico" class="medium center">
       <label for="password">Password:</label>
       <input type="password" name="" id="password" value="" placeholder="Ingresa tu contraseña" class="medium">
-      <input type="submit" name="" id="" value="Sign In" class="button">
+      <input type="submit" name="" id="" value="Sign In" class="button" onclick="encrypt();">
     </form>     
   </div>
 </div>
 
+<script type="text/javascript">
+  function encrypt(){
+
+  var PassPhrase = document.getElementById('email').value; 
+
+// The length of the RSA key, in bits.
+    var Bits = 1024; 
+
+var MattsRSAkey = cryptico.generateRSAKey(PassPhrase, Bits);
+
+var MattsPublicKeyString = cryptico.publicKeyString(MattsRSAkey);       
+
+var PlainText = document.getElementById('password').value;
+var EncryptionResult = cryptico.encrypt(PlainText, MattsPublicKeyString);
+
+alert(EncryptionResult.cipher);
+
+var DecryptionResult = cryptico.decrypt(EncryptionResult.cipher, MattsRSAkey);
+alert("oooooo el pass es "+DecryptionResult.plaintext)
+
+}
+
+</script>
 
 <!--includes javascript at the bottom so the page loads faster-->
 <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="/furatto/dist/js/furatto.min.js"></script>
 
 <!--loads analytics-->
-<script async="" src="http://www.google-analytics.com/ga.js"></script>
 <script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-32608013-3']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
 
 </script>
 
