@@ -26,7 +26,7 @@
               }
             },
             error: function(error) {
-              alert("Error: " + error.code + " " + error.message);
+              alert("ups algo salio mal usuario invalido o no registrado");
             }
         });
 
